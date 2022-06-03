@@ -68,9 +68,9 @@ namespace Task1.Tests
             Assert.That(() => LinqTask.Linq2UsingGroup(null, null).ToList(), Throws.ArgumentNullException);
         }
 
-        [TestCase(800, ExpectedResult = 2)]
+        [TestCase(800, ExpectedResult = 4)]
         [TestCase(0, ExpectedResult = 6)]
-        [TestCase(-1, ExpectedResult = 6)]
+        [TestCase(-1, ExpectedResult = 10)]
         [TestCase(1, ExpectedResult = 5)]
         public int Linq3_Limit_ReturnsCustomersCount(decimal limit)
         {
